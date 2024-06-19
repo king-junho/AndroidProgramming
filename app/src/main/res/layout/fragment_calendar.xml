@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fg_calendar_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_calendar_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="캘린더"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_logo"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/fg_calendar_toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <CalendarView
+                android:id="@+id/fg_calendar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fg_calendar_layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_diet_details"
+                android:layout_margin="@dimen/vertical_margin"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/vertical_margin"
+                app:layout_constraintTop_toBottomOf="@+id/fg_calendar_main"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:layout_marginHorizontal="@dimen/horizontal_margin"
+                    >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fg_calendar_tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_logo"
+                        android:fontFamily="@font/tmoney_round_wind_extra_bold_font"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fg_calendar_tv_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="더보기"
+                        android:textSize="@dimen/text_standard"
+                        android:textColor="@color/subGrey"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/vertical_margin_large"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fg_calendar_tv_target_protein_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="목표 섭취량"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                        android:textSize="@dimen/text_large"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fg_calendar_tv_target_protein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="2000g"
+                        android:textSize="@dimen/text_standard"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:textColor="@color/darkGrey"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/vertical_margin_large"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fg_calendar_tv_current_protein_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="현재 섭취량"
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/mainBlack"
+                        android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/fg_calendar_tv_current_protein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="1500g"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="@dimen/text_standard"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/spoqa_han_sans_neo_regular"
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

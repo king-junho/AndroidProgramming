@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "769162778818",
+    "project_id": "baekgu-dev",
+    "storage_bucket": "baekgu-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769162778818:android:3c8be69a55f1856ab6035b",
+        "android_client_info": {
+          "package_name": "hansung.ac.kr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769162778818-t4723fkca9ghgr8kcr4bua7aevkhvn3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbMq7UI32XquDq1RzbEO-u558g5H76XgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769162778818-t4723fkca9ghgr8kcr4bua7aevkhvn3a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

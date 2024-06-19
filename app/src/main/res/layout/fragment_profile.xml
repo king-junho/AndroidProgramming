@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fg_profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_profile_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="프로필"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_logo"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fg_profile_layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fg_profile_toolbar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fg_profile_img_profile_image"
+            android:layout_width="72dp"
+            android:layout_height="0dp"
+            android:src="@drawable/img_user_none"
+            app:layout_constraintRight_toLeftOf="@+id/fg_profile_layout_info_contents"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fg_profile_layout_info_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/fg_profile_img_profile_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_profile_tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김백구"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_profile_tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id@email"
+                android:textColor="@color/subGrey"
+                android:textSize="@dimen/text_small"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fg_profile_tv_user_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_profile_tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:text="로그아웃"
+            android:textColor="@color/subGrey"
+            android:textSize="@dimen/text_standard"
+            android:fontFamily="@font/spoqa_han_sans_neo_regular"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/fg_profile_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/lightGrey"
+        android:layout_marginTop="@dimen/vertical_margin_large"
+        app:layout_constraintTop_toBottomOf="@+id/fg_profile_layout_info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fg_profile_layout_diet_info"
+        />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fg_profile_layout_diet_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/vertical_margin_large"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/fg_profile_view_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fg_profile_layout_target"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/vertical_margin"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginTop="@dimen/vertical_margin_small"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_profile_tv_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="목표"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large"
+                android:fontFamily="@font/spoqa_han_sans_neo_bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/fg_profile_tv_target_edit"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="수정"-->
+<!--                android:textColor="@color/subGrey"-->
+<!--                android:textSize="@dimen/text_standard"-->
+<!--                android:fontFamily="@font/spoqa_han_sans_neo_regular"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+
+<!--                />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/vertical_margin"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginTop="@dimen/vertical_margin_small"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_roundly"
+            android:elevation="3dp"
+            android:gravity="center"
+            >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fg_profile_layout_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                >
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fg_profile_tv_weight_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="체중"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_standard"
+                    android:fontFamily="@font/tmoney_round_wind_extra_bold_font"
+                    />
+
+                <TextView
+                    android:id="@+id/fg_profile_tv_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="84 kg"
+                    android:textColor="@color/black"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fg_profile_layout_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="0.33"
+
+                >
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fg_profile_tv_height_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="신장"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tmoney_round_wind_extra_bold_font"
+                    />
+                <TextView
+                    android:id="@+id/fg_profile_tv_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="185 cm"
+                    android:textColor="@color/black"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fg_profile_layout_protein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="0.33"
+
+                >
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fg_profile_tv_protein_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="단백질"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/tmoney_round_wind_extra_bold_font"
+                    />
+                <TextView
+                    android:id="@+id/fg_profile_tv_protein"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="126 g"
+                    android:textColor="@color/black"
+                    />
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    <View
+        android:id="@+id/fg_profile_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/lightGrey"
+        android:layout_marginTop="@dimen/vertical_margin_large"
+        app:layout_constraintTop_toBottomOf="@+id/fg_profile_layout_diet_info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fg_profile_layout_setting"
+        />
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fg_profile_layout_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_margin_large"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:paddingVertical="@dimen/vertical_margin"
+
+        android:orientation="horizontal"
+        android:background="@drawable/bg_roundly"
+        android:elevation="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/fg_profile_view_2"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_profile_tv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:text="개인 정보 수정"
+            android:textSize="@dimen/text_standard"
+            android:textColor="@color/mainBlack"
+            android:fontFamily="@font/spoqa_han_sans_neo_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fg_profile_img_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/horizontal_margin_small"
+            android:src="@drawable/ic_right"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fg_profile_layout_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_margin_large"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:paddingVertical="@dimen/vertical_margin"
+
+        android:orientation="horizontal"
+        android:background="@drawable/bg_roundly"
+        android:elevation="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/fg_profile_layout_setting"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_profile_tv_survey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:text="설문 정보 수정"
+            android:textSize="@dimen/text_standard"
+            android:textColor="@color/mainBlack"
+            android:fontFamily="@font/spoqa_han_sans_neo_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fg_profile_img_survey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/horizontal_margin_small"
+            android:src="@drawable/ic_right"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/fg_profile_layout_diet"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/vertical_margin_large"-->
+<!--        android:layout_marginHorizontal="@dimen/horizontal_margin"-->
+<!--        android:paddingVertical="@dimen/vertical_margin"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@drawable/bg_roundly"-->
+<!--        android:elevation="3dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/fg_profile_layout_survey"-->
+<!--        >-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/fg_profile_tv_diet"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/horizontal_margin"-->
+<!--            android:text="식단정보 변경"-->
+<!--            android:textSize="@dimen/text_standard"-->
+<!--            android:textColor="@color/mainBlack"-->
+<!--            android:fontFamily="@font/spoqa_han_sans_neo_bold"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            />-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/fg_profile_img_diet"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="@dimen/horizontal_margin_small"-->
+<!--            android:src="@drawable/ic_right"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            />-->
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

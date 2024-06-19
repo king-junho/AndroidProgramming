@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/main_product"
+        android:icon="@drawable/ic_bnv_feed_unchecked"
+        android:title="피드"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/main_calender"
+        android:icon="@drawable/ic_bnv_game_unchecked"
+        android:title="캘린더"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/main_profile"
+        android:icon="@drawable/ic_bnv_profile_unchecked"
+        android:title="MY"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

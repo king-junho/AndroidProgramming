@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mainBlack">#363639</color>
+
+    <!-- yellow-->
+    <color name="mainYellow">#fcb600</color>
+    <color name="yellowForSplashStart">#fcd650</color>
+    <color name="yellowForSplashEnd">#fcb500</color>
+    <color name="subYellow">#feecb3</color>
+
+    <!-- grey-->
+    <color name="greyForBorder">#b0b0ba</color>
+    <color name="greyForNumberCertification">#eff0f4</color>
+    <color name="subGrey">#8f9093</color>
+    <color name="whiteGrey">#f7f8fc</color>
+    <color name="lightGrey">#eff0f4</color>
+    <color name="darkGrey">#67686b</color>
+    <color name="feedMoreImageGrey">#4c000000</color>
+
+    <!-- blue-->
+    <color name="mainBlue">#403dec</color>
+
+    <!--pink-->
+    <color name="subPink">#f2587d</color>
+
+
+    <color name="dimColor">#80000000</color>
+</resources>

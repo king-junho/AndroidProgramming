@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_tv_height_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. 현재 키를 입력해 주세요. (cm)"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/survey_edit_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin_small"
+                    android:background="@drawable/bg_btn_disabled"
+                    android:hint="ex) 172"
+                    android:maxLength="20"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/survey_layout_height">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_tv_weight_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. 현재 몸무게를 입력해 주세요. (kg)"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/survey_edit_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin_small"
+                    android:background="@drawable/bg_btn_disabled"
+                    android:hint="ex) 56"
+                    android:maxLength="20"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_proteinpurpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/survey_layout_weight">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_tv_proteinpurpose_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.단백질 섭취의 목적을 선택해 주세요."
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_proteinpurpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_proteinpurpose_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="웨이트 트레이닝" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_proteinpurpose_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="운동 선수(엘리트)" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_proteinpurpose_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="체중 감량" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_proteinpurpose_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="체중 증량" />
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_trainingpurpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/survey_layout_proteinpurpose">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_tv_trainpurpose_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.웨이트 트레이닝의 목적을 선택해 주세요."
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_trainpurpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/survey_cb_trainpurpose_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보디빌딩 대회 준비" />
+                    <RadioButton
+                        android:id="@+id/survey_cb_trainpurpose_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="바디 프로필 준비" />
+
+                    <RadioButton
+                        android:id="@+id/survey_cb_trainpurpose_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="골격근량 증가" />
+
+                    <RadioButton
+                        android:id="@+id/survey_cb_trainpurpose_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="체지방 감량" />
+
+                    <RadioButton
+                        android:id="@+id/survey_cb_trainpurpose_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="벌크업" />
+
+                    <RadioButton
+                        android:id="@+id/survey_cb_trainpurpose_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="웨이트 트레이닝을 하지 않음" />
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_trainingcnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/survey_layout_trainingpurpose">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_tv_trainingcnt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.일주일에 운동을 얼마나 하시나요?."
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_trainingcnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_trainingcnt_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주 7일" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_trainingcnt_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주 4~6회" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_trainingcnt_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주 2~3회" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_trainingcnt_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주 1회 이하" />
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_trainingtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/survey_layout_trainingcnt">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_tv_trainingtime_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6.하루에 얼마나 운동하시나요?"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_trainingtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_trainingtime_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2시간 30분 이상" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_trainingtime_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1시간 30분 ~ 2시간 30분" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_trainingtime_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30분 ~ 1시간 30분" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_trainingtime_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30분 이하" />
+
+
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_dietcnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/survey_layout_trainingtime">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_tv_dietcnt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7. 백구를 통해 하루에 몇 끼 식사를 원하시나요?"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/survey_cb_dietcnt_breakfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="아침" />
+
+                <CheckBox
+                    android:id="@+id/survey_cb_dietcnt_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="점심" />
+
+                <CheckBox
+                    android:id="@+id/survey_cb_dietcnt_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="저녁" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_allergy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/survey_layout_dietcnt">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_tv_allergy_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8. 알레르기가 있는 식품을 모두 체크해 주세요"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/survey_cbg_allergy1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp">
+
+
+                    <CheckBox
+                        android:id="@+id/survey_cb_allergy_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="닭고기" />
+
+                    <CheckBox
+                        android:id="@+id/survey_cb_allergy_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="소고기" />
+
+                    <CheckBox
+                        android:id="@+id/survey_cb_allergy_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="생선류" />
+
+                    <CheckBox
+                        android:id="@+id/survey_cb_allergy_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="유제품" />
+
+                    <CheckBox
+                        android:id="@+id/survey_cb_allergy_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="없음" />
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_snackyn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/survey_layout_allergy">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_tv_snackyn_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9. 끼니 외에 간식으로 단백질 제품을 먹는 것에 대해 어떻게 생각하시나요?"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_snackyn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_snackyn_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_snackyn_ㅜㅐ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="안 좋음" />
+                </RadioGroup>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/survey_layout_propre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/survey_layout_snackyn">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/surey_propre_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10. 제품 별 선호도에 대해 평가해 주세요."
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/survey_tv_chickensausage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="닭가슴살 소세지" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_chickensausage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensausage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensausage2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensausage3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensausage4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensausage5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/survey_tv_chickenball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="닭가슴살 볼" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_chickenball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickenball1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickenball2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickenball3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickenball4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickenball5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/survey_tv_saucechicken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="소스 닭가슴살" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_saucechicken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_saucechicken1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_saucechicken2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_saucechicken3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_saucechicken4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_saucechicken5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/survey_tv_beefsteak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="소고기 스테이크/볼" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_beefsteak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_beefsteak1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_beefsteak2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_beefsteak3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_beefsteak4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_beefsteak5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/survey_tv_godeungeo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="고등어" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_godeungeo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_godeungeo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_godeungeo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_godeungeo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_godeungeo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_godeungeo5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/survey_tv_kkongchi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="꽁치" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_kkongchi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_kkongchi1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_kkongchi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_kkongchi3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_kkongchi4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_kkongchi5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/survey_tv_samchi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="삼치" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_samchi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_samchi1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_samchi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_samchi3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_samchi4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_samchi5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/survey_tv_salmon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="연어" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_salmon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_salmon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_salmon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_salmon3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_salmon4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_salmon5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/survey_tv_eel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="장어" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_eel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_eel1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_eel2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_eel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_eel4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_eel5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/survey_tv_chickensteak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="닭가슴살 스테이크" />
+
+                <RadioGroup
+                    android:id="@+id/survey_rg_chickensteak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensteak1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensteak2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나쁨" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensteak3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보통" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensteak4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋음" />
+
+                    <RadioButton
+                        android:id="@+id/survey_rb_propre_chickensteak5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매우좋음" />
+
+                </RadioGroup>
+
+
+
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/survey_layout_flapre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/survey_layout_propre"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/surey_flapre_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. 맛 선호도에 대해 평가해 주세요."
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:id="@+id/survey_tv_spicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="매운 맛"/>
+        <RadioGroup
+            android:id="@+id/survey_rg_spicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_spicy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_spicy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_spicy3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flare_spicy4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋음"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flaopre_spicy5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우좋음"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/survey_tv_very_spicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="불닭 맛"/>
+        <RadioGroup
+            android:id="@+id/survey_rg_very_spicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_very_spicy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_very_spicy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_very_spicy3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flare_very_spicy4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋음"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flaopre_very_spicy5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우좋음"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/survey_tv_pepper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="고추 맛"/>
+        <RadioGroup
+            android:id="@+id/survey_rg_pepper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_pepper1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_pepper2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_pepper3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flare_pepper4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋음"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flaopre_pepper5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우좋음"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/survey_tv_garlic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="갈릭 맛"/>
+        <RadioGroup
+            android:id="@+id/survey_rg_garlic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_garlic1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_garlic2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_garlic3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_garlic4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋음"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_garlic5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우좋음"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/survey_tv_original"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="오리지날"/>
+        <RadioGroup
+            android:id="@+id/survey_rg_original"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_original1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_original2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_original3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_original4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋음"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_original5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우좋음"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/survey_tv_soy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="간장 맛"/>
+        <RadioGroup
+            android:id="@+id/survey_rg_soy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_soy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_soy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_soy3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flaopre_soy4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋음"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_soy5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우좋음"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/survey_tv_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="크림 맛"/>
+        <RadioGroup
+            android:id="@+id/survey_rg_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_cream1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_cream2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_cream3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_cream4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋음"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_cream5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우좋음"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/survey_tv_vege"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="채소 맛"/>
+        <RadioGroup
+            android:id="@+id/survey_rg_vege"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_vege1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_vege2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나쁨"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_vege3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보통"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_vege4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좋음"/>
+            <RadioButton
+                android:id="@+id/survey_rb_flapre_vege5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우좋음"/>
+
+        </RadioGroup>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/survey_btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn_disabled"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="@dimen/vertical_margin_large"
+        android:textColor="@color/subGrey"
+        android:text="저 장"
+        android:fontFamily="@font/spoqa_han_sans_neo_bold"
+        app:layout_constraintTop_toBottomOf="@+id/survey_layout_flapre"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
